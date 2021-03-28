@@ -31,6 +31,9 @@ group :development do
   # Can be configured to work on production as well see: https://github.com/MiniProfiler/rack-mini-profiler/blob/master/README.md
   gem 'rack-mini-profiler', '~> 2.0'
   gem 'listen', '~> 3.3'
+
+  gem 'rubocop'
+  gem 'rubocop-rails'
 end
 
 group :test do
