@@ -13,9 +13,10 @@ default: &default
   adapter: mysql2
   encoding: utf8mb4
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: root
-  password:
-  socket: /tmp/mysql.sock
+  username: <%= ENV['DATABASE_USERNAME'] || 'root' %>
+  password: <%= ENV['DATABASE_PASSWORD'] || '' %>
+  host: <%= ENV['DATABASE_HOST'] || 'localhost' %>
+  port: <%= ENV['DATABASE_PORT'] || '3306' %>
 
 development:
   <<: *default
@@ -51,5 +52,3 @@ test:
 production:
   <<: *default
   database: rails61_prayground_production
-  username: rails61_prayground
-  password: <%= ENV['RAILS61_PRAYGROUND_DATABASE_PASSWORD'] %>
