@@ -34,6 +34,7 @@ group :development do
   gem 'listen', '~> 3.3'
   gem 'rack-mini-profiler', '~> 2.0'
 
+  gem 'rakeman', require: false
   gem 'rubocop', require: false
   gem 'rubocop-rails', require: false
 end
