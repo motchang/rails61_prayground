@@ -7,8 +7,9 @@ Rails.application.config.generators do |gen|
   gen.helper false
 
   # Don't generate system test files.
-  gen.system_tests = false
-  gen.test_framework :rspec,
+  gen.system_tests = nil
+  gen.test_framework :test_unit,
+                     spec:          true,
                      javascripts:   false,
                      stylesheets:   false,
                      helper:        false,
