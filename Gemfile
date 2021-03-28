@@ -37,6 +37,8 @@ group :development do
   gem 'rakeman', require: false
   gem 'rubocop', require: false
   gem 'rubocop-rails', require: false
+
+  gem 'annotate'
 end
 
 group :test do
