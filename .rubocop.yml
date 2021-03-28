@@ -15,6 +15,10 @@ AllCops:
     - 'bin/**'
     - 'db/schema.rb'
 
+Metrics/BlockLength:
+  Exclude:
+    - 'lib/tasks/**'
+
 Style/Documentation:
   Enabled: false
 
@@ -25,3 +29,7 @@ Metrics/MethodLength:
   Enabled: true
   CountComments: false
   Max: 20
+
+Layout/HashAlignment:
+  EnforcedHashRocketStyle: 'table'
+  EnforcedColonStyle: 'table'
